@@ -1,3 +1,4 @@
+-- Retrieve booking information along with Customer name and Vehicle name.
 SELECT
   b.booking_id,
   u.name AS customer_name,
@@ -9,3 +10,18 @@ FROM
   bookings AS b
   INNER JOIN users AS u ON b.user_id = u.user_id
   INNER JOIN vehicles AS v ON b.vehicle_id = v.vehicle_id;
+
+-- Find all vehicles that have never been booked.
+SELECT
+  *
+FROM
+  vehicles AS v
+WHERE
+  NOT EXISTS (
+    SELECT
+      vehicle_id
+    FROM
+      bookings
+    WHERE
+      vehicle_id = v.vehicle_id
+  );
