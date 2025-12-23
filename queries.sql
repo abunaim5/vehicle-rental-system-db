@@ -34,3 +34,16 @@ FROM
 WHERE
   type = 'car'
   AND status = 'available';
+
+-- Find the total number of bookings for each vehicle and display only those vehicles that have more than 2 bookings.
+SELECT
+  v.name AS vehicle_name,
+  COUNT(*) AS total_bookings
+FROM
+  bookings AS b
+  INNER JOIN vehicles AS v ON b.vehicle_id = v.vehicle_id
+GROUP BY
+  b.vehicle_id,
+  v.name
+HAVING
+  COUNT(*) > 2;
