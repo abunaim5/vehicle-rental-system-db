@@ -25,3 +25,12 @@ WHERE
     WHERE
       vehicle_id = v.vehicle_id
   );
+
+-- Retrieve all available vehicles of a specific type (e.g. cars).
+SELECT
+  *
+FROM
+  vehicles
+WHERE
+  type = 'car'
+  AND status = 'available';
