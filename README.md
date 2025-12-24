@@ -29,6 +29,13 @@ Relationships:
 * A vehicle can be booked multiple times
 * Each booking is associated with one user and one vehicle
 
+## ERD Diagram
+
+The Entity Relationship Diagram (ERD) for this Vehicle Rental System was designed using Lucidchart.
+It illustrates the relationships between users, vehicles, and bookings tables.
+
+ERD Link: [View ERD Diagram](https://lucid.app/lucidchart/8ffd6c33-77ed-4bfe-a0d8-f7a272b24d85/edit?viewport_loc=-1516%2C-16%2C2992%2C1405%2C0_0&invitationId=inv_2f8b96de-9ea1-4979-81be-b0569945845b)
+
 ## SQL Queries and Solutions
 
 This section documents all required SQL queries along with their complete solutions. Each query addresses a specific business requirement of the Vehicle Rental System database.
